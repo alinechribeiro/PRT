@@ -45,7 +45,7 @@ $ php -S localhost:9291 -t public
  
 ##### Create User
 
-    ** /api/createuser **
+###### /api/createuser
 
 1. Method: POST
 
@@ -65,7 +65,7 @@ $ curl --location --request POST 'http://localhost:9291/api/createuser' \
 
 ##### List All Users
 
-    **/api/listusers**
+###### /api/listusers
 
 1. Method: GET
 
@@ -85,7 +85,7 @@ $ curl --location --request POST 'http://localhost:9291/api/createuser' \
 
 ##### Search
 
-    **/api/searchuser**
+###### /api/searchuser
 
 1. Method: POST
 
@@ -108,7 +108,7 @@ curl --location --request POST 'http://localhost:9291/api/searchuser/' \
 
 ##### Delete User
 
-    **/api/deleteuser/{id}**
+###### /api/deleteuser/{id}
 
 1. Method: GET
 
@@ -122,7 +122,7 @@ curl --location --request GET 'http://localhost:9291/api/deleteuser/4' \
 
 ##### Update User Forename
 
-    **/api/updateuser**
+###### /api/updateuser
 
 1. Method: POST
 
@@ -138,7 +138,7 @@ curl --location --request POST 'http://localhost:9291/api/updateuser/' \
 
 ##### Toggle Darkmode
 
-    **/api/togglemode/{id}**
+###### api/togglemode/{id}
 
 1. Method: GET
 
