@@ -24,7 +24,7 @@ $ php artisan migrate
 ```
 5. Import users.csv (provided) file to the database table.
 
-#### Endpoints Authentication
+## Endpoints Authentication
 
 1. Each endpoint must receive a header Bearer token in the following format: 'username:token'
 
@@ -33,7 +33,7 @@ $ php artisan migrate
 3. The minimum token size is 8 characters.
 
 
-#### Testing the API
+## Testing the API
 
 1. Start the server using the command line:
 
@@ -41,11 +41,11 @@ $ php artisan migrate
 $ php -S localhost:9291 -t public 
 ```
 
-#### Endpoints
+## Endpoints
  
-##### Create User
+### Create User
 
-###### /api/createuser
+#### /api/createuser
 
 1. Method: POST
 
@@ -63,9 +63,9 @@ $ curl --location --request POST 'http://localhost:9291/api/createuser' \
 --form 'token="protected"'
 ```
 
-##### List All Users
+### List All Users
 
-###### /api/listusers
+#### /api/listusers
 
 1. Method: GET
 
@@ -83,9 +83,9 @@ $ curl --location --request POST 'http://localhost:9291/api/createuser' \
 --form 'token="protected"'
 ```
 
-##### Search
+### Search
 
-###### /api/searchuser
+#### /api/searchuser
 
 1. Method: POST
 
@@ -106,9 +106,9 @@ curl --location --request POST 'http://localhost:9291/api/searchuser/' \
 }'
 ```
 
-##### Delete User
+### Delete User
 
-###### /api/deleteuser/{id}
+#### /api/deleteuser/{id}
 
 1. Method: GET
 
@@ -120,9 +120,9 @@ curl --location --request GET 'http://localhost:9291/api/deleteuser/4' \
 --header 'Authorization: Bearer alinechribeiro:protected'
 ```
 
-##### Update User Forename
+### Update User Forename
 
-###### /api/updateuser
+#### /api/updateuser
 
 1. Method: POST
 
@@ -136,9 +136,9 @@ curl --location --request POST 'http://localhost:9291/api/updateuser/' \
 --form 'forename="Mary"'
 ```
 
-##### Toggle Darkmode
+### Toggle Darkmode
 
-###### api/togglemode/{id}
+#### /api/togglemode/{id}
 
 1. Method: GET
 
@@ -150,7 +150,7 @@ curl --location --request GET 'http://localhost:9291/api/togglemode/3' \
 --header 'Authorization: Bearer alinechribeiro:protected'
 ```
 	
-#### PHP Unit Tests: 
+## PHP Unit Tests: 
 The PHPUNIT will test all the endpoints calls.
 On the project root directory, run: 
 ```bash
@@ -159,6 +159,6 @@ $ vendor/bin/phpunit
 
 Expected result: 6 tests, 6 assertions.
 
-#### Testing with Postman:
+## Testing with Postman:
 
 Import the collection file 'Protected.postman_collection.json' into your Postman software and execute the requests. 
