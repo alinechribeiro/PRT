@@ -45,7 +45,7 @@ $ php -S localhost:9291 -t public
  
 ##### Create User
 
-**/api/createuser**
+    **/api/createuser**
 
 1. Method: POST
 
@@ -63,7 +63,9 @@ $ curl --location --request POST 'http://localhost:9291/api/createuser' \
 --form 'token="protected"'
 ```
 
-**/api/listusers**
+##### List All Users
+
+    **/api/listusers**
 
 1. Method: GET
 
@@ -81,7 +83,9 @@ $ curl --location --request POST 'http://localhost:9291/api/createuser' \
 --form 'token="protected"'
 ```
 
-**/api/searchuser**
+##### Search
+
+    **/api/searchuser**
 
 1. Method: POST
 
@@ -102,7 +106,9 @@ curl --location --request POST 'http://localhost:9291/api/searchuser/' \
 }'
 ```
 
-**/api/deleteuser/{id}**
+##### Delete User
+
+    **/api/deleteuser/{id}**
 
 1. Method: GET
 
@@ -114,7 +120,9 @@ curl --location --request GET 'http://localhost:9291/api/deleteuser/4' \
 --header 'Authorization: Bearer alinechribeiro:protected'
 ```
 
-**/api/updateuser**
+##### Update User Forename
+
+    **/api/updateuser**
 
 1. Method: POST
 
@@ -128,7 +136,9 @@ curl --location --request POST 'http://localhost:9291/api/updateuser/' \
 --form 'forename="Mary"'
 ```
 
-**/api/togglemode/{id}**
+##### Toggle Darkmode
+
+    **/api/togglemode/{id}**
 
 1. Method: GET
 
