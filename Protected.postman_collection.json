@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "cce264db-a3c1-416b-b19e-5d1b397027dd",
+		"name": "Protected",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "alinechribeiro:protected",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "c8c71961e7248f05666a8215ab5ac445",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "forename",
+							"value": "Aline",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Ribeiro",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "alinechriro12345590",
+							"type": "text"
+						},
+						{
+							"key": "darkmode",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "created_at",
+							"value": "'2021-01-09'",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "protected555",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9291/api/createuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9291",
+					"path": [
+						"api",
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "alinechribeiro:protected",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "c8c71961e7248f05666a8215ab5ac445",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "forename",
+							"value": "Tom",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "surname",
+							"value": "Hardingffffff",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "tomhardingffff",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "darkmode",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "created_at",
+							"value": "'2021-01-09'",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9291/api/listusers/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9291",
+					"path": [
+						"api",
+						"listusers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "alinechribeiro:protected",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "c8c71961e7248f05666a8215ab5ac445",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "forename",
+							"value": "Aline",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "surname",
+							"value": "Ribeiro",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "alinechribeiro",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "darkmode",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "'1'",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9291/api/deleteuser/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9291",
+					"path": [
+						"api",
+						"deleteuser",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "alinechribeiro:protected",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "c8c71961e7248f05666a8215ab5ac445",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"identifier\": \"forename\",\n    \"identifierField\": \"John\",\n    \"fields\": [\"surname\",\"darkmode\",\"username\",\"created_at\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9291/api/searchuser/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9291",
+					"path": [
+						"api",
+						"searchuser",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "alinechribeiro:protected",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "c8c71961e7248f05666a8215ab5ac445"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "forename",
+							"value": "Mary",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "tomhardingffff",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "darkmode",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "created_at",
+							"value": "'2021-01-09'",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9291/api/updateuser/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9291",
+					"path": [
+						"api",
+						"updateuser",
+						""
+					],
+					"query": [
+						{
+							"key": "forename",
+							"value": "Joaquim",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update darkmode",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "alinechribeiro:protected",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "c8c71961e7248f05666a8215ab5ac445",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "forename",
+							"value": "Tomffff",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "surname",
+							"value": "Hardingffffff",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "tomhardingffff",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "darkmode",
+							"value": "0",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "created_at",
+							"value": "'2021-01-09'",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9291/api/togglemode/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9291",
+					"path": [
+						"api",
+						"togglemode",
+						"3"
+					],
+					"query": [
+						{
+							"key": "forename",
+							"value": "Joaquim",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
