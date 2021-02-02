@@ -45,7 +45,7 @@ $ php -S localhost:9291 -t public
  
 ##### Create User
 
-    **/api/createuser**
+    ** /api/createuser **
 
 1. Method: POST
 
